@@ -30,6 +30,7 @@ class App extends Component {
 
     render() {
 
+        const onChangeFunc = ({ target }) => this.handleChange(target);
         return (
             <div className="App">
                 {largeHeader}
@@ -42,7 +43,7 @@ class App extends Component {
                         <h3>What's your name?</h3>
                         <label>
                             <input name="userName" value={this.state.userName} 
-                                onChange={({ target }) => this.handleChange(target)}/>
+                                onChange={onChangeFunc}/>
                         </label>
 
                     Let's play with some text below.
@@ -50,12 +51,12 @@ class App extends Component {
                         <h3>Message</h3>
                         <label>
                             <input name="message" value={this.state.message} 
-                                onChange={({ target }) => this.handleChange(target)}/>
+                                onChange={onChangeFunc}/>
                         </label>
                         <h3>Color</h3>
                         <label>
                             <input name="color" type="color" value={this.state.color} 
-                                onChange={({ target }) => this.handleChange(target)}/>
+                                onChange={onChangeFunc}/>
                         </label>
                     </div>
 
@@ -63,10 +64,10 @@ class App extends Component {
                         <h3>Font Family </h3>
                         <label>
                             <input type="radio" name="selectedFont" value="Helvetica" checked={this.state.selectedFont === 'Helvetica'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Helvetica
+                                onChange={onChangeFunc}/> Helvetica
 
                             <input type="radio" name="selectedFont" value="Papyrus" checked={this.state.selectedFont === 'Papyrus'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Papyrus
+                                onChange={onChangeFunc}/> Papyrus
                         </label>
                     </div>
 
@@ -74,9 +75,9 @@ class App extends Component {
                         <h3>Font Size </h3>
                         <label>
                             <input type="radio" name="selectedFontSize" value="72px" checked={this.state.selectedFont === '72px'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Large
+                                onChange={onChangeFunc}/> Large
                             <input type="radio" name="selectedFontSize" value="12px" checked={this.state.selectedFont === '12px'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Small
+                                onChange={onChangeFunc}/> Small
                         </label>
                     </div>
 
@@ -84,10 +85,10 @@ class App extends Component {
                         <h3>Font Style</h3>
                         <label>
                             <input type="radio" name="selectedFontStyle" value="italic" checked={this.state.selectedFontStyle === 'italic'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Italic
+                                onChange={onChangeFunc}/> Italic
 
                             <input type="radio" name="selectedFontStyle" value="normal" checked={this.state.selectedFontStyle === 'normal'} 
-                                onChange={({ target }) => this.handleChange(target)}/> None
+                                onChange={onChangeFunc}/> None
                         </label>
                     </div>
 
@@ -95,13 +96,13 @@ class App extends Component {
                         <h3>Border</h3>
                         <label>
                             <input type="radio" name="selectedBorder" value="1px solid black" checked={this.state.selectedBorder === '1px solid black'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Thin
+                                onChange={onChangeFunc}/> Thin
 
                             <input type="radio" name="selectedBorder" value="5px dashed blue" checked={this.state.selectedBorder === '5px dashed blue'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Thick
+                                onChange={onChangeFunc}/> Thick
 
                             <input type="radio" name="selectedBorder" value="none" checked={this.state.selectedBorder === 'none'} 
-                                onChange={({ target }) => this.handleChange(target)}/> None
+                                onChange={onChangeFunc}/> None
                         </label>
                     </div>
 
@@ -109,10 +110,10 @@ class App extends Component {
                         <h3>Padding</h3>
                         <label>
                             <input type="radio" name="selectedPadding" value="200px" checked={this.state.selectedPadding === '200px'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Large
+                                onChange={onChangeFunc}/> Large
 
                             <input type="radio" name="selectedPadding" value="20px" checked={this.state.selectedPadding === '20px'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Small
+                                onChange={onChangeFunc}/> Small
                         </label>
                     </div>
 
@@ -120,10 +121,10 @@ class App extends Component {
                         <h3>Margin</h3>
                         <label>
                             <input type="radio" name="selectedMargin" value="300px" checked={this.state.selectedMargin === '300px'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Large
+                                onChange={onChangeFunc}/> Large
 
                             <input type="radio" name="selectedMargin" value="50px" checked={this.state.selectedMargin === '50px'} 
-                                onChange={({ target }) => this.handleChange(target)}/> Small
+                                onChange={onChangeFunc}/> Small
                         </label>
                     </div>
                 </div>
