@@ -17,7 +17,8 @@ class App extends Component {
             userName: props.userName,
             selectedFontSize: 'option1',
             selectedFontStyle: 'option1',
-            selectedBorder: 'option1'
+            selectedBorder: 'option1',
+            selectedPadding: 'option1'
         };
     }
 
@@ -33,7 +34,7 @@ class App extends Component {
         return (
             <div className="App">
                 {largeHeader}
-                <div>
+                <div className="editor">
                     <div>
             Hey there, {this.state.userName}
                     </div>
@@ -54,27 +55,16 @@ class App extends Component {
                         </label>
                     </div>
 
-                    <div className="radioButtons">
-                        <h3>Margin</h3>
-                        <label>
-                            <input type="radio" name="selectedMargin" value="300px" checked={this.state.selectedMargin === '300px'} onChange={({ target }) => this.handleChange(target)} />
-                        Large
-                        </label>
-                        <label>
-                            <input type="radio" name="selectedMargin" value="50px" checked={this.state.selectedMargin === '50px'} onChange={({ target }) => this.handleChange(target)} />
-                        Small
-                        </label>
-                    </div>
 
                     <div className="radioButtons">
                         <h3>Font Family </h3>
                         <label>
-                            <input type="radio" name="selectedFont" value="Arial" checked={this.state.selectedFont === 'Arial'} onChange={({ target }) => this.handleChange(target)} />
-                        Sans Serif
+                            <input type="radio" name="selectedFont" value="Helvetica" checked={this.state.selectedFont === 'Helvetica'} onChange={({ target }) => this.handleChange(target)} />
+                        Helvetica
                         </label>
                         <label>
-                            <input type="radio" name="selectedFont" value="Times" checked={this.state.selectedFont === 'Times'} onChange={({ target }) => this.handleChange(target)} />
-                        Serif
+                            <input type="radio" name="selectedFont" value="Papyrus" checked={this.state.selectedFont === 'Papyrus'} onChange={({ target }) => this.handleChange(target)} />
+                        Papyrus
                         </label>
                     </div>
                     
@@ -107,25 +97,47 @@ class App extends Component {
                         <label>
                             <input type="radio" name="selectedBorder" value="1px solid black" checked={this.state.selectedBorder === '1px solid black'} onChange={({ target }) => this.handleChange(target)} />
                             Thin
-                        </label>
-                        <label>
+                        
                             <input type="radio" name="selectedBorder" value="5px dashed blue" checked={this.state.selectedBorder === '5px dashed blue'} onChange={({ target }) => this.handleChange(target)} />
                             Thick
-                        </label>
-                        <label>
+                        
                             <input type="radio" name="selectedBorder" value="none" checked={this.state.selectedBorder === 'none'} onChange={({ target }) => this.handleChange(target)} />
                             None
                         </label>
                     </div>
+                    
+                    <div className="radioButtons">
+                        <h3>Padding</h3>
+                        <label>
+                            <input type="radio" name="selectedPadding" value="200px" checked={this.state.selectedPadding === '200px'} onChange={({ target }) => this.handleChange(target)} />
+                            Large
+                        
+                            <input type="radio" name="selectedPadding" value="20px" checked={this.state.selectedPadding === '20px'} onChange={({ target }) => this.handleChange(target)} />
+                            Small
+                        </label>
+                    </div>
 
+                    <div className="radioButtons">
+                        <h3>Margin</h3>
+                        <label>
+                            <input type="radio" name="selectedMargin" value="300px" checked={this.state.selectedMargin === '300px'} onChange={({ target }) => this.handleChange(target)} />
+                        Large
+                        </label>
+                        <label>
+                            <input type="radio" name="selectedMargin" value="50px" checked={this.state.selectedMargin === '50px'} onChange={({ target }) => this.handleChange(target)} />
+                        Small
+                        </label>
+                    </div>
                 </div>
+
                 <div className="display" style={{ 
                     color: this.state.color, 
                     fontFamily: this.state.selectedFont, 
                     margin: this.state.selectedMargin, 
                     fontSize: this.state.selectedFontSize, 
                     fontStyle:this.state.selectedFontStyle,
-                    border: this.state.selectedBorder }}>
+                    border: this.state.selectedBorder,
+                    padding: this.state.selectedPadding }}>
                     {this.state.message}
                 </div>
             </div>

@@ -4,6 +4,13 @@
   margin: 10px;
 }
 
+.editor{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 50vh;
+}
+
 label {
   display: block;
   margin: 20px;
@@ -14,5 +21,9 @@ label {
   text-align: center;
   margin: 100px;
   padding: 100px;
+}
+
+.radioButtons {
+  padding: 20px;
 }
 
