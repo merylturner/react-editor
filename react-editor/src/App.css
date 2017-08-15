@@ -1,8 +1,23 @@
 .App {
   text-align: center;
+  display: block;
+  margin: 10px;
 }
 
-.App-logo {
+label {
+  display: block;
+  margin: 20px;
+}
+
+/* #serif {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#sans-serif {
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
@@ -16,9 +31,10 @@
 
 .App-intro {
   font-size: large;
-}
+} */
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.display{
+  font-size: 24px;
+  text-align: center;
+  margin: 100px;
 }
