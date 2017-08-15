@@ -36,95 +36,95 @@ class App extends Component {
                 {largeHeader}
                 <div className="editor">
                     <div>
-                      Hey there, {this.state.userName}
+            Hey there, {this.state.userName}
                     </div>
 
                     <div>
                         <h3>What's your name?</h3>
                         <label>
-                            <input name="userName" value={this.state.userName} 
-                                onChange={onChangeFunc}/>
+                            <input name="userName" value={this.state.userName}
+                                onChange={onChangeFunc} />
                         </label>
 
-                    Let's play with some text below.
+            Let's play with some text below.
 
                         <h3>Message</h3>
                         <label>
-                            <input name="message" value={this.state.message} 
-                                onChange={onChangeFunc}/>
+                            <input name="message" value={this.state.message}
+                                onChange={onChangeFunc} />
                         </label>
                         <h3>Color</h3>
                         <label>
-                            <input name="color" type="color" value={this.state.color} 
-                                onChange={onChangeFunc}/>
+                            <input name="color" type="color" value={this.state.color}
+                                onChange={onChangeFunc} />
                         </label>
                     </div>
 
                     <div className="radioButtons">
                         <h3>Font Family </h3>
                         <label>
-                            <input type="radio" name="selectedFont" value="Helvetica" checked={this.state.selectedFont === 'Helvetica'} 
-                                onChange={onChangeFunc}/> Helvetica
+                            <input type="radio" name="selectedFont" value="Helvetica" checked={this.state.selectedFont === 'Helvetica'}
+                                onChange={onChangeFunc} /> Helvetica
 
-                            <input type="radio" name="selectedFont" value="Papyrus" checked={this.state.selectedFont === 'Papyrus'} 
-                                onChange={onChangeFunc}/> Papyrus
+                            <input type="radio" name="selectedFont" value="Papyrus" checked={this.state.selectedFont === 'Papyrus'}
+                                onChange={onChangeFunc} /> Papyrus
                         </label>
                     </div>
 
                     <div className="radioButtons">
                         <h3>Font Size </h3>
                         <label>
-                            <input type="radio" name="selectedFontSize" value="72px" checked={this.state.selectedFont === '72px'} 
-                                onChange={onChangeFunc}/> Large
-                            <input type="radio" name="selectedFontSize" value="12px" checked={this.state.selectedFont === '12px'} 
-                                onChange={onChangeFunc}/> Small
+                            <input type="radio" name="selectedFontSize" value="72px" checked={this.state.selectedFont === '72px'}
+                                onChange={onChangeFunc} /> Large
+                            <input type="radio" name="selectedFontSize" value="12px" checked={this.state.selectedFont === '12px'}
+                                onChange={onChangeFunc} /> Small
                         </label>
                     </div>
 
                     <div className="radioButtons">
                         <h3>Font Style</h3>
                         <label>
-                            <input type="radio" name="selectedFontStyle" value="italic" checked={this.state.selectedFontStyle === 'italic'} 
-                                onChange={onChangeFunc}/> Italic
+                            <input type="radio" name="selectedFontStyle" value="italic" checked={this.state.selectedFontStyle === 'italic'}
+                                onChange={onChangeFunc} /> Italic
 
-                            <input type="radio" name="selectedFontStyle" value="normal" checked={this.state.selectedFontStyle === 'normal'} 
-                                onChange={onChangeFunc}/> None
+                            <input type="radio" name="selectedFontStyle" value="normal" checked={this.state.selectedFontStyle === 'normal'}
+                                onChange={onChangeFunc} /> None
                         </label>
                     </div>
 
                     <div className="radioButtons">
                         <h3>Border</h3>
                         <label>
-                            <input type="radio" name="selectedBorder" value="1px solid black" checked={this.state.selectedBorder === '1px solid black'} 
-                                onChange={onChangeFunc}/> Thin
+                            <input type="radio" name="selectedBorder" value="1px solid black" checked={this.state.selectedBorder === '1px solid black'}
+                                onChange={onChangeFunc} /> Thin
 
-                            <input type="radio" name="selectedBorder" value="5px dashed blue" checked={this.state.selectedBorder === '5px dashed blue'} 
-                                onChange={onChangeFunc}/> Thick
+                            <input type="radio" name="selectedBorder" value="5px dashed blue" checked={this.state.selectedBorder === '5px dashed blue'}
+                                onChange={onChangeFunc} /> Thick
 
-                            <input type="radio" name="selectedBorder" value="none" checked={this.state.selectedBorder === 'none'} 
-                                onChange={onChangeFunc}/> None
+                            <input type="radio" name="selectedBorder" value="none" checked={this.state.selectedBorder === 'none'}
+                                onChange={onChangeFunc} /> None
                         </label>
                     </div>
 
                     <div className="radioButtons">
                         <h3>Padding</h3>
                         <label>
-                            <input type="radio" name="selectedPadding" value="200px" checked={this.state.selectedPadding === '200px'} 
-                                onChange={onChangeFunc}/> Large
+                            <input type="radio" name="selectedPadding" value="200px" checked={this.state.selectedPadding === '200px'}
+                                onChange={onChangeFunc} /> Large
 
-                            <input type="radio" name="selectedPadding" value="20px" checked={this.state.selectedPadding === '20px'} 
-                                onChange={onChangeFunc}/> Small
+                            <input type="radio" name="selectedPadding" value="20px" checked={this.state.selectedPadding === '20px'}
+                                onChange={onChangeFunc} /> Small
                         </label>
                     </div>
 
                     <div className="radioButtons">
                         <h3>Margin</h3>
                         <label>
-                            <input type="radio" name="selectedMargin" value="300px" checked={this.state.selectedMargin === '300px'} 
-                                onChange={onChangeFunc}/> Large
+                            <input type="radio" name="selectedMargin" value="300px" checked={this.state.selectedMargin === '300px'}
+                                onChange={onChangeFunc} /> Large
 
-                            <input type="radio" name="selectedMargin" value="50px" checked={this.state.selectedMargin === '50px'} 
-                                onChange={onChangeFunc}/> Small
+                            <input type="radio" name="selectedMargin" value="50px" checked={this.state.selectedMargin === '50px'}
+                                onChange={onChangeFunc} /> Small
                         </label>
                     </div>
                 </div>
