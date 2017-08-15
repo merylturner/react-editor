@@ -14,7 +14,9 @@ class App extends Component {
             color: '#7109AA',
             margin: '100px',
             selectedFont: 'option1',
-            selectedMargin: 'option1'
+            selectedMargin: 'option1',
+            userName: props.userName,
+            selectedFontSize: 'option1'
         };
     }
 
@@ -24,11 +26,11 @@ class App extends Component {
         });
     }
 
-    handleOptionChange(event) {
-        this.setState({
-            selectedOption: event.target.value
-        });
-    }
+    // handleOptionChange(event) {
+    //     this.setState({
+    //         selectedOption: event.target.value
+    //     });
+    // }
 
     render() {
 
@@ -37,11 +39,16 @@ class App extends Component {
                 {largeHeader}
                 <div>
                     <div>
-            Hey {this.state.name}
+            Hey {this.state.userName}
                     </div>
+
                     <div>
                         <label>
-                            <h3>Message </h3>
+                            <h3>UserName</h3>
+                            <input name="userName" value={this.state.userName} onChange={({ target }) => this.handleChange(target)} />
+                        </label>
+                        <label>
+                            <h3>Message</h3>
                             <input name="message" value={this.state.message} onChange={({ target }) => this.handleChange(target)} />
                         </label>
                         <label>
@@ -49,7 +56,8 @@ class App extends Component {
                             <input name="color" type="color" value={this.state.color} onChange={({ target }) => this.handleChange(target)} />
                         </label>
                     </div>
-                    <div>
+
+                    <div className="radioButtons">
                         <label>
                             <h3>Margin</h3>
                             <input type="radio" name="selectedMargin" value="300px" checked={this.state.selectedMargin === '300px'} onChange={({ target }) => this.handleChange(target)} />
@@ -60,6 +68,7 @@ class App extends Component {
                         Small
                         </label>
                     </div>
+
                     <div className="radioButtons">
                         <label>
                             <h3>Font Family </h3>
@@ -71,8 +80,21 @@ class App extends Component {
                         Serif
                         </label>
                     </div>
+                    
+                    <div className="radioButtons">
+                        <label>
+                            <h3>Font Size </h3>
+                            <input type="radio" name="selectedFontSize" value="72px" checked={this.state.selectedFont === '72px'} onChange={({ target }) => this.handleChange(target)} />
+                        Large
+                        </label>
+                        <label>
+                            <input type="radio" name="selectedFontSize" value="12px" checked={this.state.selectedFont === '12px'} onChange={({ target }) => this.handleChange(target)} />
+                        Small
+                        </label>
+                    </div>
+
                 </div>
-                <div className="display" style={{ color: this.state.color, fontFamily: this.state.selectedFont, margin: this.state.selectedMargin }}>
+                <div className="display" style={{ color: this.state.color, fontFamily: this.state.selectedFont, margin: this.state.selectedMargin, fontSize: this.state.selectedFontSize }}>
                     {this.state.message}
                 </div>
             </div>
