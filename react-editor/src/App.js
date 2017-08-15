@@ -13,7 +13,8 @@ class App extends Component {
             message: props.initialMessage,
             color: '#7109AA',
             margin: '100px',
-            selectedOption: 'option1'
+            selectedFont: 'option1',
+            selectedMargin: 'option1'
         };
     }
 
@@ -47,24 +48,31 @@ class App extends Component {
                             <h3>Color</h3>
                             <input name="color" type="color" value={this.state.color} onChange={({ target }) => this.handleChange(target)} />
                         </label>
+                    </div>
+                    <div>
                         <label>
                             <h3>Margin</h3>
-                            <input name="margin" value={this.state.margin} onChange={({ target }) => this.handleChange(target)} />
+                            <input type="radio" name="selectedMargin" value="300px" checked={this.state.selectedMargin === '300px'} onChange={({ target }) => this.handleChange(target)} />
+                        Large
+                        </label>
+                        <label>
+                            <input type="radio" name="selectedMargin" value="100px" checked={this.state.selectedMargin === '100px'} onChange={({ target }) => this.handleChange(target)} />
+                        Small
                         </label>
                     </div>
                     <div className="radioButtons">
                         <label>
                             <h3>Font Family </h3>
-                            <input type="radio" name="selectedOption" value="Arial" checked={this.state.selectedOption === 'Arial'} onChange={({ target }) => this.handleChange(target)} />
+                            <input type="radio" name="selectedFont" value="Arial" checked={this.state.selectedFont === 'Arial'} onChange={({ target }) => this.handleChange(target)} />
                         Sans Serif
                         </label>
                         <label>
-                            <input type="radio" name="selectedOption" value="Times" checked={this.state.selectedOption === 'Times'} onChange={({ target }) => this.handleChange(target)} />
+                            <input type="radio" name="selectedFont" value="Times" checked={this.state.selectedFont === 'Times'} onChange={({ target }) => this.handleChange(target)} />
                         Serif
                         </label>
                     </div>
                 </div>
-                <div className="display" style={{ color: this.state.color, fontFamily: this.state.selectedOption }}>
+                <div className="display" style={{ color: this.state.color, fontFamily: this.state.selectedFont, margin: this.state.selectedMargin }}>
                     {this.state.message}
                 </div>
             </div>
