@@ -74,9 +74,9 @@ class App extends Component {
                     <div className="radioButtons">
                         <h3>Font Size </h3>
                         <label>
-                            <input type="radio" name="selectedFontSize" value="72px" checked={this.state.selectedFont === '72px'}
+                            <input type="radio" name="selectedFontSize" value="72px" checked={this.state.selectedFontSize === '72px'}
                                 onChange={onChangeFunc} /> Large
-                            <input type="radio" name="selectedFontSize" value="12px" checked={this.state.selectedFont === '12px'}
+                            <input type="radio" name="selectedFontSize" value="12px" checked={this.state.selectedFontSize === '12px'}
                                 onChange={onChangeFunc} /> Small
                         </label>
                     </div>
